@@ -2,6 +2,7 @@
 
 import sys
 
+
 def concat(*string, seperateur):
     array = [i for i in string]
     strings = ""
