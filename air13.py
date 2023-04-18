@@ -8,7 +8,6 @@ def test_air00(file_name):
 
     output_lines = output.split('\n')
 
-    # Remove the list representation from the output_lines
     output_lines.pop(0)
 
     expected_output = ["Bonjour", "les", "gars"]
@@ -157,7 +156,6 @@ def test_air09(file_name):
 
 
 def test_air10(file_name):
-    # Create a temporary file with content to test the air10.py script
     test_file_name = "temp_test_file.txt"
     test_file_content = "Je danse le mia"
 
@@ -174,7 +172,6 @@ def test_air10(file_name):
         print(f"Output: {output}")
         print(f"Expected output: {expected_output}")
 
-    # Remove the temporary test file after the test is done
     os.remove(test_file_name)
 
     return success, output
@@ -253,6 +250,3 @@ for file in dirs:
             print(f"{file} ({total_tests}): {status}")
 
 print(f"Total success: ({total_success}/{total_tests})")
-
-# Update the total number of successful tests and the total number of tests.
-# Print the test result in the desired format.
