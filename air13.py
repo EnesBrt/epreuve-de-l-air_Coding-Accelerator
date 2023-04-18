@@ -1,3 +1,5 @@
+# Meta exercice
+
 import os, sys
 import subprocess
 
