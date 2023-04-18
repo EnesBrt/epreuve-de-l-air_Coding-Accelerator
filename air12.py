@@ -2,8 +2,6 @@
 import random
 import sys
 
-array = [3, 59, 9, 43, 21, 12, 90, 7]
-
 
 def quick_sort(array):
     if len(array) <= 1:
