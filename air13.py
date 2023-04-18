@@ -242,7 +242,7 @@ dirs.sort()
 for file in dirs:
     if "air00.py" <= file <= "air12.py" and os.path.isfile(os.path.join(path, file)):
         if file in test_functions:
-            test_function = test_functions[file]  # Get the test function for the current file
+            test_function = test_functions[file]
             success, output = test_function(os.path.join(path, file))
             total_success += int(success)
             total_tests += 1
