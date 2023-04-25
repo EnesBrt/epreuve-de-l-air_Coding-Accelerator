@@ -12,8 +12,20 @@ def concat(*string, seperateur):
     return strings
 
 
-if len(sys.argv) > 2:
-    argument_strings = sys.argv[1:-1]
-    argument_separator = sys.argv[-1]
-
-    concat(*argument_strings, seperateur=argument_separator)
+try:
+    if len(sys.argv) > 2:
+        argument_strings = sys.argv[1:-1]
+        argument_separator = sys.argv[-1]
+        concat(*argument_strings, seperateur=argument_separator)
+    else:
+        print("error")
+        sys.exit()
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

@@ -22,7 +22,16 @@ def custom_split(string, separator):
     return words
 
 
-argument_one = sys.argv[1]
-argument_two = sys.argv[2]
-
-custom_split(argument_one, argument_two)
+try:
+    argument_one = sys.argv[1]
+    argument_two = sys.argv[2]
+    custom_split(argument_one, argument_two)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

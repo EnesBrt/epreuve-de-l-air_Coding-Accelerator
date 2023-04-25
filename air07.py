@@ -14,8 +14,17 @@ def sort_list(numbers_list, number):
     for i in numbers_list:
         print(i, end=" ")
 
-
-number_list = sys.argv[1:-1]
-number = sys.argv[-1]
-sort_list(number_list, number)
+try:
+    number_list = sys.argv[1:-1]
+    number = sys.argv[-1]
+    sort_list(number_list, number)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()
 

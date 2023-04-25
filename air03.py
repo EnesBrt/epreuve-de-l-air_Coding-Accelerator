@@ -17,5 +17,12 @@ def no_pair(numbers):
             break
 
 
-argument = sys.argv[1:]
-no_pair(argument)
+try:
+    argument = sys.argv[1:]
+    no_pair(argument)
+except IndexError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

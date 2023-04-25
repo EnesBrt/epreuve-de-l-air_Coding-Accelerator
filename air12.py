@@ -24,7 +24,17 @@ def quick_sort(array):
     return sorted_list
 
 
-argument = [int(arg) for arg in sys.argv[1:]]
-sorted_array = quick_sort(argument)
-for number in sorted_array:
-    print(number, end=" ")
+try:
+    argument = [int(arg) for arg in sys.argv[1:]]
+    sorted_array = quick_sort(argument)
+    for number in sorted_array:
+        print(number, end=" ")
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

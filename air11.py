@@ -14,6 +14,16 @@ def pyramid(string, number):
         print("\n")
 
 
-argument_one = sys.argv[1]
-argument_two = int(sys.argv[2])
-pyramid(argument_one, argument_two)
+try:
+    argument_one = sys.argv[1]
+    argument_two = int(sys.argv[2])
+    pyramid(argument_one, argument_two)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

@@ -25,11 +25,20 @@ def split_in_function(string, separator):
     return array
 
 
-if len(sys.argv) > 2:
-    argument_one = sys.argv[1]
-    argument_two = sys.argv[2]
-
-    split_in_function(argument_one, argument_two)
-
-else:
-    print("Please provide a string and a separator as arguments.")
+try:
+    if len(sys.argv) > 2:
+        argument_one = sys.argv[1]
+        argument_two = sys.argv[2]
+        split_in_function(argument_one, argument_two)
+    else:
+        print("error")
+        sys.exit()
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

@@ -21,7 +21,17 @@ def fusion(list_one, word, list_two):
         print(i, end=" ")
 
 
-fusion_index = sys.argv.index("fusion")
-list_one = [int(arg) for arg in sys.argv[1:fusion_index]]
-list_two = [int(arg) for arg in sys.argv[fusion_index + 1:]]
-fusion(list_one, "fusion", list_two)
+try:
+    fusion_index = sys.argv.index("fusion")
+    list_one = [int(arg) for arg in sys.argv[1:fusion_index]]
+    list_two = [int(arg) for arg in sys.argv[fusion_index + 1:]]
+    fusion(list_one, "fusion", list_two)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

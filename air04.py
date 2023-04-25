@@ -15,9 +15,18 @@ def one_at_the_time(string):
 
     result += string[-1]
 
-
     print(result)
 
 
-argument = sys.argv[1]
-one_at_the_time(argument)
+try:
+    argument = sys.argv[1]
+    one_at_the_time(argument)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

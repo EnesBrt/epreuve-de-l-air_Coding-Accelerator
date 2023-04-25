@@ -20,7 +20,15 @@ def add_or_substract(numbers, operator):
 
 numbers_list = [int(arg) for arg in sys.argv[1:-1]]
 
-# Get the operator argument
-operator = sys.argv[-1]
-
-add_or_substract(numbers_list, operator)
+try:
+    operator = sys.argv[-1]
+    add_or_substract(numbers_list, operator)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

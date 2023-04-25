@@ -9,5 +9,15 @@ def read_script_content(file_name):
         print(file.read())
 
 
-agrument = sys.argv[1]
-read_script_content(agrument)
+try:
+    agrument = sys.argv[1]
+    read_script_content(agrument)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

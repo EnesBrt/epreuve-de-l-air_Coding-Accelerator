@@ -12,6 +12,16 @@ def delete_absent_character(string_list, letter):
     print(new_list)
 
 
-string_list = [arg for arg in sys.argv[1:-1]]
-letter = sys.argv[-1]
-delete_absent_character(string_list, letter)
+try:
+    string_list = [arg for arg in sys.argv[1:-1]]
+    letter = sys.argv[-1]
+    delete_absent_character(string_list, letter)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()

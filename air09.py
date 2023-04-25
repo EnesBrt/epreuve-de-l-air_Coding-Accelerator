@@ -14,6 +14,15 @@ def to_the_left(sting_list):
         else:
             print(new_list[n], end=', ')
 
-
-string_list = [arg for arg in sys.argv[1:]]
-to_the_left(string_list)
+try:
+    string_list = [arg for arg in sys.argv[1:]]
+    to_the_left(string_list)
+except IndexError:
+    print("error")
+    sys.exit()
+except ValueError:
+    print("error")
+    sys.exit()
+except TypeError():
+    print("error")
+    sys.exit()
